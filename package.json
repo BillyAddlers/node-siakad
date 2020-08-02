@@ -1,0 +1,9 @@
+{
+  "name": "node-siakad",
+  "version": "1.0.0",
+  "description": "An Academic System Information written in TypeScript, using NodeJS as interpreter",
+  "main": "dist/index.js",
+  "repository": "https://github.com/BillyAddlers/node-siakad",
+  "author": "Riichi_Rusdiana#6815",
+  "license": "MIT"
+}

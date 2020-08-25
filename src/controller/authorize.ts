@@ -6,16 +6,16 @@ import argon2 from "argon2";
 export class Main implements Route {
     executable = async function (req: Request, res: Response, next: NextFunction) {
         const UserModel = Database.getModel();
-        const user = await UserModel.findById(req.body.nim) || { _id: "000000", passwordHash: "none" };
-        const isPass = await argon2.verify(user.passwordHash, req.body.password);
-        console.log(isPass); // berak
+        let isPass = false;
+        const user = await UserModel.findById(req.body.nim);
+        if (user) isPass = await argon2.verify(user.passwordHash, req.body.password);
+        console.log(isPass);
     };
 
     meta = {
-        method: "GET",
+        method: "POST",
         path: "/api/auth"
     };
 
     name = "Login";
 }
-

@@ -23,7 +23,8 @@
       "func-names": "off",
       "@typescript-eslint/no-var-requires": "off",
       "no-mixed-operators": "off",
-      "camelcase": "off"
+      "camelcase": "off",
+      "@typescript-eslint/naming-convention": "off"
     }
   },
   "dependencies": {

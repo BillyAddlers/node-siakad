@@ -1,6 +1,8 @@
 import { createSchema, Type, typedModel } from "ts-mongoose";
+import {TokenSchema} from "./token.db";
 
 const genders = ["male", "female"] as const;
+const level = [1, 2, 3] as const;
 
 const AddressSchema = createSchema(
     {
@@ -9,12 +11,14 @@ const AddressSchema = createSchema(
     }
 );
 
-export const SiswaSchema = createSchema(
+export const UserSchema = createSchema(
     {
-        _id: Type.number({ required: true }),
+        _id: Type.string({ required: true }),
         passwordHash: Type.string({ required: true }),
+        token: Type.string({ required: true }),
         name: Type.string({ required: true }),
         gender: Type.string({ required: true, enum: genders }),
+        level: Type.number({ required: true }),
         address: Type.schema({ required: false }).of(AddressSchema)
     }
 );

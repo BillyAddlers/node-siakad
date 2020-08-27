@@ -7,6 +7,7 @@ import logger from "morgan";
 import sassMiddleware from "node-sass-middleware";
 import { Database } from "./Database";
 import { RouterHandler } from "./Router";
+import cookieSession from "cookie-session";
 
 export class Application {
     public app = express();
@@ -17,9 +18,15 @@ export class Application {
         app.set("view engine", "ejs");
 
         app.use(json());
-        app.use(urlencoded({ extended: false }));
+        app.use(urlencoded({ extended: true }));
         app.use(logger("dev"));
         app.use(cookieParser());
+
+        app.set("trust proxy", 1)
+        app.use(cookieSession({
+            name: "session",
+            keys: ["inikunci"]
+        }))
         app.use(sassMiddleware({
             src: "public",
             dest: "public",

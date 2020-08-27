@@ -9,7 +9,7 @@ export class Main implements Route {
         let isPass = false;
         const user = await UserModel.findById(req.body.nim);
         if (user) isPass = await argon2.verify(user.passwordHash, req.body.password);
-        console.log(req.body.nim + " is " + isPass);
+        console.log(`${req.body.nim} is ${isPass}`);
     };
 
     meta = {

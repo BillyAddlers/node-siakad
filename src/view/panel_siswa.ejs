@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" class="full-height">
+
+<head>
+    <title><%= title %></title>
+    <link rel="icon" href="/favicons.png" />
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/popper.min.js"></script>
+    <script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/javascripts/mdb.min.js"></script>
+</head>
+
+<body>
+<% include components/navbar.ejs %>
+<div class="jumbotron">
+    <div>
+        <h1>Welcome <%= name %></h1>
+        <h4>Siswa</h4>
+    </div>
+    <% include components/footer.ejs %>
+</div>
+</body>
+
+
+</html>

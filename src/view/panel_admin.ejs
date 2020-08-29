@@ -21,25 +21,10 @@
         <h1>Welcome <%= name %></h1>
         <% if (level === 3) {%>
             <h4>Admin</h4>
-            <div>
-                <button class="btn btn-primary" href="#">Create user</button>
-                <div class="form-popup" id="formPopup">
-                    <form action="/api/register" class="form-container">
-                        <h1>Register an account</h1>
 
-                        <label for="email"><b>NIM</b></label>
-                        <input type="text" placeholder="Enter Email" name="email" required>
-
-                        <label for="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="password" required>
-
-                        <button type="submit" class="btn btn-primary">Register</button>
-                        <button type="submit" class="btn btn-secondary cancel" onclick="closeForm()">Close</button>
-                    </form>
-                </div>
-            </div>
         <%} else if (level === 2) {%>
             <h4>Guru</h4>
+
         <%}%>
     </div>
     <% include components/footer.ejs %>

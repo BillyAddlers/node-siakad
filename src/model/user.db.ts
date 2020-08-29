@@ -14,6 +14,7 @@ const AddressSchema = createSchema(
 export const UserSchema = createSchema(
     {
         _id: Type.string({ required: true }),
+        email: Type.string({ required: false, default: "uwu" }),
         passwordHash: Type.string({ required: true }),
         token: Type.string({ required: true }),
         name: Type.string({ required: true }),

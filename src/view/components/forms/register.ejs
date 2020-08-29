@@ -1,0 +1,39 @@
+<form method="POST" action="/api/register">
+    <fieldset>
+        <legend>Register</legend>
+        <div class="form-group">
+            <label for="inputEmail">Email address</label>
+            <input type="email" class="form-control" id="inputEmail" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="inputName">Name</label>
+            <input type="text" class="form-control" id="inputName" name="name" aria-describedby="nameHelp" placeholder="Enter fullname">
+        </div>
+        <div class="form-group">
+            <label for="inputGender">Gender</label>
+            <select class="form-control" id="inputGender">
+                <option>Male</option>
+                <option>Female</option>
+                <option>Combat Aircraft</option>
+                <option>Battleship</option>
+                <option>Helicopter</option>
+                <option>Hemophrodit</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="inputLevel">Level</label>
+            <select class="form-control" id="inputLevel">
+                <option>1 (Siswa)</option>
+                <option>2 (Guru)</option>
+                <option>3 (Admin)</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Register</button>
+    </fieldset>
+</form>
